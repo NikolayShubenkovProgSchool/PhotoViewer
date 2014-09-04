@@ -21,6 +21,12 @@
 		84026DC719B8B7B100A1A173 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84026DA919B8B7B100A1A173 /* UIKit.framework */; };
 		84026DCF19B8B7B100A1A173 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84026DCD19B8B7B100A1A173 /* InfoPlist.strings */; };
 		84026DD119B8B7B100A1A173 /* FlickrPhotosViewerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84026DD019B8B7B100A1A173 /* FlickrPhotosViewerTests.m */; };
+		84026DDE19B8B86000A1A173 /* OSTACollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84026DDB19B8B86000A1A173 /* OSTACollectionViewCell.m */; };
+		84026DDF19B8B86000A1A173 /* OSTAImageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84026DDD19B8B86000A1A173 /* OSTAImageContentViewController.m */; };
+		84026DF719B8B8BF00A1A173 /* PSRClassWichPerformsAsyncOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = 84026DF019B8B8BF00A1A173 /* PSRClassWichPerformsAsyncOperations.m */; };
+		84026DF819B8B8BF00A1A173 /* PSRFlickrAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 84026DF219B8B8BF00A1A173 /* PSRFlickrAPI.m */; };
+		84026DF919B8B8BF00A1A173 /* PSRFlickrPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 84026DF419B8B8BF00A1A173 /* PSRFlickrPhoto.m */; };
+		84026DFA19B8B8BF00A1A173 /* PSRFlickrSearchOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 84026DF619B8B8BF00A1A173 /* PSRFlickrSearchOptions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +59,18 @@
 		84026DCC19B8B7B100A1A173 /* FlickrPhotosViewerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FlickrPhotosViewerTests-Info.plist"; sourceTree = "<group>"; };
 		84026DCE19B8B7B100A1A173 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		84026DD019B8B7B100A1A173 /* FlickrPhotosViewerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlickrPhotosViewerTests.m; sourceTree = "<group>"; };
+		84026DDA19B8B86000A1A173 /* OSTACollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSTACollectionViewCell.h; sourceTree = "<group>"; };
+		84026DDB19B8B86000A1A173 /* OSTACollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSTACollectionViewCell.m; sourceTree = "<group>"; };
+		84026DDC19B8B86000A1A173 /* OSTAImageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSTAImageContentViewController.h; sourceTree = "<group>"; };
+		84026DDD19B8B86000A1A173 /* OSTAImageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSTAImageContentViewController.m; sourceTree = "<group>"; };
+		84026DEF19B8B8BF00A1A173 /* PSRClassWichPerformsAsyncOperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSRClassWichPerformsAsyncOperations.h; sourceTree = "<group>"; };
+		84026DF019B8B8BF00A1A173 /* PSRClassWichPerformsAsyncOperations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSRClassWichPerformsAsyncOperations.m; sourceTree = "<group>"; };
+		84026DF119B8B8BF00A1A173 /* PSRFlickrAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSRFlickrAPI.h; sourceTree = "<group>"; };
+		84026DF219B8B8BF00A1A173 /* PSRFlickrAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSRFlickrAPI.m; sourceTree = "<group>"; };
+		84026DF319B8B8BF00A1A173 /* PSRFlickrPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSRFlickrPhoto.h; sourceTree = "<group>"; };
+		84026DF419B8B8BF00A1A173 /* PSRFlickrPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSRFlickrPhoto.m; sourceTree = "<group>"; };
+		84026DF519B8B8BF00A1A173 /* PSRFlickrSearchOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSRFlickrSearchOptions.h; sourceTree = "<group>"; };
+		84026DF619B8B8BF00A1A173 /* PSRFlickrSearchOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSRFlickrSearchOptions.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,11 +130,9 @@
 		84026DAB19B8B7B100A1A173 /* FlickrPhotosViewer */ = {
 			isa = PBXGroup;
 			children = (
-				84026DB419B8B7B100A1A173 /* OSTAAppDelegate.h */,
-				84026DB519B8B7B100A1A173 /* OSTAAppDelegate.m */,
-				84026DB719B8B7B100A1A173 /* Main.storyboard */,
-				84026DBA19B8B7B100A1A173 /* OSTAViewController.h */,
-				84026DBB19B8B7B100A1A173 /* OSTAViewController.m */,
+				84026DEE19B8B8BF00A1A173 /* FlickrAPI */,
+				84026DE119B8B87F00A1A173 /* Controller */,
+				84026DE019B8B86900A1A173 /* View */,
 				84026DBD19B8B7B100A1A173 /* Images.xcassets */,
 				84026DAC19B8B7B100A1A173 /* Supporting Files */,
 			);
@@ -150,6 +166,44 @@
 				84026DCD19B8B7B100A1A173 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		84026DE019B8B86900A1A173 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				84026DB719B8B7B100A1A173 /* Main.storyboard */,
+				84026DDA19B8B86000A1A173 /* OSTACollectionViewCell.h */,
+				84026DDB19B8B86000A1A173 /* OSTACollectionViewCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		84026DE119B8B87F00A1A173 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				84026DBA19B8B7B100A1A173 /* OSTAViewController.h */,
+				84026DBB19B8B7B100A1A173 /* OSTAViewController.m */,
+				84026DDC19B8B86000A1A173 /* OSTAImageContentViewController.h */,
+				84026DDD19B8B86000A1A173 /* OSTAImageContentViewController.m */,
+				84026DB419B8B7B100A1A173 /* OSTAAppDelegate.h */,
+				84026DB519B8B7B100A1A173 /* OSTAAppDelegate.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		84026DEE19B8B8BF00A1A173 /* FlickrAPI */ = {
+			isa = PBXGroup;
+			children = (
+				84026DEF19B8B8BF00A1A173 /* PSRClassWichPerformsAsyncOperations.h */,
+				84026DF019B8B8BF00A1A173 /* PSRClassWichPerformsAsyncOperations.m */,
+				84026DF119B8B8BF00A1A173 /* PSRFlickrAPI.h */,
+				84026DF219B8B8BF00A1A173 /* PSRFlickrAPI.m */,
+				84026DF319B8B8BF00A1A173 /* PSRFlickrPhoto.h */,
+				84026DF419B8B8BF00A1A173 /* PSRFlickrPhoto.m */,
+				84026DF519B8B8BF00A1A173 /* PSRFlickrSearchOptions.h */,
+				84026DF619B8B8BF00A1A173 /* PSRFlickrSearchOptions.m */,
+			);
+			path = FlickrAPI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,8 +305,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				84026DB219B8B7B100A1A173 /* main.m in Sources */,
+				84026DDE19B8B86000A1A173 /* OSTACollectionViewCell.m in Sources */,
+				84026DFA19B8B8BF00A1A173 /* PSRFlickrSearchOptions.m in Sources */,
 				84026DBC19B8B7B100A1A173 /* OSTAViewController.m in Sources */,
 				84026DB619B8B7B100A1A173 /* OSTAAppDelegate.m in Sources */,
+				84026DF819B8B8BF00A1A173 /* PSRFlickrAPI.m in Sources */,
+				84026DF919B8B8BF00A1A173 /* PSRFlickrPhoto.m in Sources */,
+				84026DF719B8B8BF00A1A173 /* PSRClassWichPerformsAsyncOperations.m in Sources */,
+				84026DDF19B8B86000A1A173 /* OSTAImageContentViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +517,7 @@
 				84026DD619B8B7B100A1A173 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84026DD719B8B7B100A1A173 /* Build configuration list for PBXNativeTarget "FlickrPhotosViewerTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +526,7 @@
 				84026DD919B8B7B100A1A173 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
