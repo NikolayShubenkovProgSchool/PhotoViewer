@@ -92,21 +92,25 @@
 {
     dispatch_queue_t downloadQueue = dispatch_queue_create("download queue", 0);
     dispatch_async(downloadQueue, ^{
-        if (!flickrPhoto)
+        if (!flickrPhoto){
             return;
+        }
         
         NSData *photoData = [NSData dataWithContentsOfURL:[flickrPhoto highQualityURL]];
-        if (!photoData)
+        if (!photoData){
             return;
+        }
         
         NSLog(@"image downloaded");
         
         UIImage *photo = [UIImage imageWithData:photoData];
-        if (!photo)
+        if (!photo){
             return;
+        }
         
-        if (!self.loadedPhotos)
+        if (!self.loadedPhotos){
             self.loadedPhotos = [NSMutableArray new];
+        }
             
         [self.loadedPhotos addObject:photo];
         
@@ -124,25 +128,30 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if (!sender || ![sender isKindOfClass:[NSIndexPath class]])
+    if (!sender || ![sender isKindOfClass:[NSIndexPath class]]){
         return;
+    }
     
     NSIndexPath *indexPath = (NSIndexPath *)sender;
     
-    UIImage *photo = [self.loadedPhotos objectAtIndex:indexPath.row];
-    if (!photo)
+    UIImage *photo = self.loadedPhotos[indexPath.row];
+    if (!photo){
         return;
+    }
     
-    PSRFlickrPhoto *flickrPhoto = (PSRFlickrPhoto *)[self.flickrPhotos objectAtIndex:indexPath.row];
-    if (!flickrPhoto)
+    PSRFlickrPhoto *flickrPhoto = (PSRFlickrPhoto *)self.flickrPhotos[indexPath.row];
+    if (!flickrPhoto){
         return;
+    }
     
     NSString *flickrPhotoDescription = [flickrPhoto.info objectForKey:@"title"];
-    if (!flickrPhotoDescription)
+    if (!flickrPhotoDescription){
         return;
+    }
     
-    if (![segue.destinationViewController isKindOfClass:[OSTAImageContentViewController class]])
+    if (![segue.destinationViewController isKindOfClass:[OSTAImageContentViewController class]]){
         return;
+    }
     
     OSTAImageContentViewController *imageContentViewController = segue.destinationViewController;
     imageContentViewController.image = photo;
@@ -153,8 +162,9 @@
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    if (self.loadedPhotos)
+    if (self.loadedPhotos){
         return [self.loadedPhotos count];
+    }
     
     return 0;
 }
@@ -162,21 +172,25 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     OSTACollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
-    if (!cell)
+    if (!cell){
         return cell;
+    }
     
-    if (![cell isKindOfClass:[OSTACollectionViewCell class]])
+    if (![cell isKindOfClass:[OSTACollectionViewCell class]]){
         return cell;
+    }
     
-    cell.imageView.image = [self.loadedPhotos objectAtIndex:indexPath.row];
+    cell.imageView.image = self.loadedPhotos[indexPath.row];
     
-    PSRFlickrPhoto *flickrPhoto = (PSRFlickrPhoto *)[self.flickrPhotos objectAtIndex:indexPath.row];
-    if (!flickrPhoto)
+    PSRFlickrPhoto *flickrPhoto = (PSRFlickrPhoto *)self.flickrPhotos[indexPath.row];
+    if (!flickrPhoto){
         return cell;
+    }
     
     NSString *flickrPhotoDescription = [flickrPhoto.info objectForKey:@"title"];
-    if (!flickrPhotoDescription)
+    if (!flickrPhotoDescription){
         return cell;
+    }
     
     cell.label.text = flickrPhotoDescription;
         
@@ -195,8 +209,7 @@
  */
 - (IBAction)searchTextFieldReturn:(id)sender
 {
-    if ([self.searchTextField isFirstResponder])
-        [self.searchTextField resignFirstResponder];
+    [self.searchTextField resignFirstResponder];
 }
 
 /**
@@ -205,9 +218,11 @@
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     
     UITouch *touch = [[event allTouches] anyObject];
-    if ([self.searchTextField isFirstResponder] && [touch view] != self.searchTextField) {
+    
+    if ([self.searchTextField isFirstResponder] && [touch view] != self.searchTextField){
         [self.searchTextField resignFirstResponder];
     }
+    
     [super touchesBegan:touches withEvent:event];
 }
 @end

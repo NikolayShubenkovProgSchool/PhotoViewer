@@ -21,11 +21,13 @@
 {
     [super viewDidLoad];
     
-    if (self.image)
+    if (self.image){
         self.imageView.image = self.image;
+    }
     
-    if (self.text)
+    if (self.text){
         self.textView.text = self.text;
+    }
 }
 
 - (void) viewDidAppear:(BOOL)animated
