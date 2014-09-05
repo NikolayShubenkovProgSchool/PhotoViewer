@@ -30,6 +30,8 @@
 
 - (void) viewDidAppear:(BOOL)animated
 {
+    [super viewDidAppear:animated];
+    
     //animation
     [UIView animateWithDuration:1.5 animations:^{
         self.imageView.alpha = 1;
