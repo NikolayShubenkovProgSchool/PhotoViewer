@@ -129,11 +129,11 @@
     
     NSIndexPath *indexPath = (NSIndexPath *)sender;
     
-    UIImage *photo = [self.loadedPhotos objectAtIndex:indexPath.row];
+    UIImage *photo = self.loadedPhotos[indexPath.row];
     if (!photo)
         return;
     
-    PSRFlickrPhoto *flickrPhoto = (PSRFlickrPhoto *)[self.flickrPhotos objectAtIndex:indexPath.row];
+    PSRFlickrPhoto *flickrPhoto = (PSRFlickrPhoto *)self.flickrPhotos[indexPath.row];
     if (!flickrPhoto)
         return;
     
@@ -168,9 +168,9 @@
     if (![cell isKindOfClass:[OSTACollectionViewCell class]])
         return cell;
     
-    cell.imageView.image = [self.loadedPhotos objectAtIndex:indexPath.row];
+    cell.imageView.image = self.loadedPhotos[indexPath.row];
     
-    PSRFlickrPhoto *flickrPhoto = (PSRFlickrPhoto *)[self.flickrPhotos objectAtIndex:indexPath.row];
+    PSRFlickrPhoto *flickrPhoto = (PSRFlickrPhoto *)self.flickrPhotos[indexPath.row];
     if (!flickrPhoto)
         return cell;
     
