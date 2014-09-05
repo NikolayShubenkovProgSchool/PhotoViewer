@@ -39,7 +39,9 @@
 
 - (IBAction)backToSearchButtonTouchUoInside:(UIButton *)sender
 {
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:^{
+        //nothing to do
+    }];
 }
 
 @end
